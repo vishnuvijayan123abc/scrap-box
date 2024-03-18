@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/45536f30e1.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 100px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #1a1a1a;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top " style="background-color:#1a1a1a;">
+    <div class="container-fluid"> 
+      <a class="navbar-brand" href="#">
+        <h3 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: #a6a6a6;">ScrapBox</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"  style="color: white;" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'scrap_list'%}" style="color: white;">All Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+             category
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="dropdown ">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+              {%if request.user.profile.profile_pic%}
+              <img class="profile-small" src="{{request.user.profile.profile_pic.url}}" alt="Avatar" style="width: 50px;height: 50px;border-radius: 50px;">
+              {%else%}
+              <img class="profile-small" src="{%static 'images/profilepic.png' %}" alt="Avatar" style="width: 50px;height: 50px;border-radius: 50px;">
+              {%endif%}
+
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+           
+            <li><a class="dropdown-item" href="{%url 'profile' request.user.id %}">profile</a></li>
+           
+            <li><a class="dropdown-item" href="{%url 'sign_out'%}">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+      <!-- ........................................nav bar end................................................ -->
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner" style="height: 400px;">
+          <div class="carousel-item active">
+            <img src="{%static 'images\c3.png'%}" class="d-block w-100" alt="..." style="height: 400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="..."style="height: 400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="..."style="height: 400px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="row" style="width:100%; height: 400px; background-color: black;" class="mb-4">
+        
+       
+        <div class="col-6">
+            <img src="{%static 'images\f3.webp' %}" alt="" style="height: 400px;  width: 100%;border-radius: 15px; ">
+        </div>
+        <div class="col-6  ">
+
+            <p style="color: white; font-size: 35px; margin-top: 40px;">BROWSE SCRAP BOX 
+                DATABASE OF NEW PRODUCTS
+                 IN INDIA</p>
+                <br>
+            <p style="color: white;">
+                Explore a curated collection of pre-loved items, each with a unique story to tell. From fashion to furniture, electronics to collectibles, find hidden gems that not only elevate your style but also contribute to a more eco-conscious lifestyle. Join us in the journey of giving pre-loved items a new home. Shop sustainably, shop stylishly at Scrap Box. 
+
+            </p>
+            
+        </div>
+
+
+    </div>
+
+
+
+    <div class="row mt-4" >
+        <div class="col" style="width: 60%;height: 500px;">
+            <div class="row">
+                <div>
+                    <p style="font-family: fantasy; font-size: 45px; margin-top: 80px; margin-left: 65px;">Planning to sell?</p>
+                    <p style="font-size: 30px; margin-left: 65px; margin-top: -19px;">Buyer is just a click away</p>
+                    <div class="row">
+                        <div class="col" style="margin-left: 30px;">
+                            <div class="card mb-3" style="max-width:280px;border-style: none;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <i class="fa-solid fa-bag-shopping"
+                                            style="color: #111212;font-size: 55px; margin-top: 20px; margin-left: 30px;"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+        
+                                            <p class="card-text"> outright</p>
+                                            <p class="card-text" style="margin-top: -12px; font-size: 20px;"> <b>Sales</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-3" style="max-width:280px;border-style: none;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <i class="fa-regular fa-clock"
+                                            style="color: #0a0a0a;font-size: 55px; margin-top: 20px; margin-left: 30px;"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-title">Best offers</p>
+                                            <p class="card-text " style="font-size: 20px; margin-top: -8px;"> <b>in 29 mins</b>
+                                            </p>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left: 30px;">
+                            <div class="card mb-3" style="max-width:280px;border-style: none;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <i class="fa-solid fa-user"
+                                            style="color: #0c0d0d;font-size: 55px; margin-top: 20px; margin-left: 30px;"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-title">7600+ satisfied</p>
+                                            <p class="card-text" style="font-size: 20px; margin-top: -8px;"><b>customers</b></p>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-3" style="max-width:280px;border-style: none;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <i class="fa-regular fa-handshake"
+                                            style="color: #0f0f0f;margin-top: 20px; margin-left: 30px;font-size: 55px;"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-title">Hassle Free</p>
+                                            <p class="card-text" style="font-size: 20px; margin-top: -8px;"><b>Processing</b>
+                                            </p>
+        
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="col" style="width: 40%;height: 500px; ">
+            <img src="{%static 'images\bk2.webp'%}" alt="" style="width: 95%;height: 450px;border-radius: 15px;">
+        
+        </div>
+    </div>
+
+   <!-- .............................................................footer start..................................................................... -->
+    <footer class="footer-distributed">
+    
+          <div class="footer-left">
+    
+            <h3><span>
+                
+                <img src="{%static 'images\Scrap BOX.png'%}" alt="" style="height: 100px;width: 100px;">
+            </span></h3>
+    
+            <p class="footer-links">
+              <a href="#" class="link-1">Home</a>
+              
+              <a href="#">Blog</a>
+            
+              <a href="#">Pricing</a>
+            
+              <a href="#">About</a>
+              
+              <a href="#">Faq</a>
+              
+              <a href="#">Contact</a>
+            </p>
+    
+            
+          </div>
+    
+          <div class="footer-center">
+    
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+1.555.555.5555</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+    
+          </div>
+    
+          <div class="footer-right">
+    
+            <p class="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+    
+            <div class="footer-icons">
+    
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+    
+            </div>
+    
+          </div>
+    
+        </footer>
+        <!-- ..........................................................footer end............................................... -->
+</body>
+</html>
